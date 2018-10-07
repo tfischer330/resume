@@ -11,10 +11,10 @@
 
 
 % Start a document with the here given default font size and paper size.
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt]{article}
 
 % Set the page margins.
-\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[letter,margin=0.5in]{geometry}
 
 % Setup the language.
 \usepackage[english]{babel}
@@ -23,9 +23,10 @@
 % Makes resume-specific commands available.
 \usepackage{resume}
 \usepackage{tabto}
+\usepackage{graphicx}
+\usepackage{wrapfig}
 
 \fontencoding{OT1}
-
 
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
@@ -34,6 +35,7 @@
 % title on top of the document
 \maintitle{Tobias Fischer}{}{}
 
+
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
 % \noindent prevents paragraph's first lines from indenting
@@ -41,11 +43,12 @@
 % \sbull is a spaced bullet
 % \href well..
 % \\ breaks the line into a new paragraph
+
+
 \noindent\href{mailto:tfischer@ucsb.edu}{tfischer@ucsb.edu}\sbull
 (510) 350-6763 \sbull
-\href{https://linkedin.com/in/tobias-fischer-662968138
-}{https://linkedin.com/in/tobias-fischer-662968138
-}
+\href{https://linkedin.com/in/tobifischer}{https://linkedin.com/in/tobifischer} 
+
 
 
 \spacedhrule{0.4em}{-0.6em}  % a horizontal line with some vertical spacing before and after
@@ -56,7 +59,7 @@
 {\href{https://engineering.ucsb.edu/}{University of California, Santa Barbara}}
 {\textsc{Santa Barbara, CA}} {%
 	\headedsubsection
-	{\textsc{Bachelor of Science in Mechanical Engineering}}
+	{\textsc{Pursuing Bachelor of Science in Mechanical Engineering}}
 	{2018 -- 2022}{}
 	%\bodytext{}
 }
@@ -75,12 +78,12 @@
 \roottitle{Experience}
 
 \headedsection  % sets the header for the section and includes any subsections
-  {\href{https://www.sap.com/index.html}{SAP}}
-  {\textsc{Walldorf, Baden-Wurrtemberg, Germany}} {
+  {\href{https://www.sap.com/index.html}{SAP Headquarters}}
+  {\textsc{Walldorf, Germany}} {
   \headedsubsection
     {Data Analytics Intern}
     {Jul \apo18 -- Sep \apo18}
-    {\bodytext{Developed metrics and \acr{KPIs} for the enterprise CoDePipeS and Fiori continuous development teams. Used Grafana dashboards to monitor performance metrics of the Jenkins pipelines, Docker containers, and virtual machine hosts. Managed the InfluxDB and Prometheus backend databases responsible for forwarding the data to Grafana. Received an introduction to \acr{AGILE} and \acr{PMBOK} project management strategies, as well as the DevOps environment.}}
+    {\bodytext{Developed metrics and \acr{KPIs} for the enterprise CoDePipeS (\textbf{Co}ntinuous \textbf{De}velopment \textbf{Pipe}line \textbf{S}ervice) and Fiori CI/CD teams of the Development Landscape Management department. Used Grafana dashboards to monitor performance metrics of the Jenkins pipelines, Docker containers, and virtual machine hosts. Managed the InfluxDB and Prometheus backend databases responsible for forwarding the data to Grafana. Received an introduction to \acr{AGILE} and \acr{PMBOK} project management strategies, as well as the DevOps environment.}}
 }
 
 \headedsection  % sets the header for a subsection and contains usually body text
@@ -90,7 +93,7 @@
   \headedsubsection
     {Volunteer Research Assistant}
     {Jun \apo17 -- Sep \apo17}
-    {\bodytext{Analyzed differential energy flux data from the \href{https://www.nasa.gov/mission_pages/maven/main/index.html}{NASA \acr{MAVEN}} orbiter’s Solar Energetic Particle (\acr{SEP}) and the Solar Wind Electron Analyzer (\acr{SWEA}) instruments, with the goal of understanding atmospheric loss at Mars. These instruments gave continuous \textit{in situ} measurements of \acr{SEP} fluxes and solar wind pressures. Generated a database of periods of high \acr{SEP} flux events at Mars. Performed data analysis using Interactive Data Language (\acr{IDL}) and Python to investigate the effect of high \acr{SEP} activity and Martian atmospheric loss. Under mentorship of Christina Lee.}}
+    {\bodytext{Analyzed differential energy flux data from the \href{https://www.nasa.gov/mission_pages/maven/main/index.html}{NASA \acr{MAVEN}} orbiter’s Solar Energetic Particle (\acr{SEP}) and the Solar Wind Electron Analyzer (\acr{SWEA}) instruments, with the goal of understanding atmospheric loss at Mars. These instruments gave continuous \textit{in situ} measurements of \acr{SEP} fluxes and solar wind pressures. Generated a database of periods of high \acr{SEP} flux events at Mars. Performed statistical data analysis using Python and Interactive Data Language (\acr{IDL}) to investigate the effect of high \acr{SEP} activity and Martian atmospheric loss. Under mentorship of Christina Lee.}}
 }
 
 \headedsection
@@ -100,7 +103,7 @@
   \headedsubsection
     {Volunteer Research Assistant}
     {Jun \apo16 -- Jun \apo17}
-    {\bodytext{Conducted and analyzed data from electrophysiological experiments aimed at measuring the response of airway epithelial cells affected with the genetic disease cystic fibrosis (CF) to rhamnolipids, a virulence factor released by \textit{Pseudomonas} bacteria. By measuring the transepithelial electrical impact of rhamnolipids, it was found that they exert a regulatory role on CFTR chloride ion channel function. Data were presented at the 31\textsuperscript{st}Annual North American Cystic Fibrosis Conference. Additionally resolved several technical problems and created an easy-to-read manual for the lab's confocal microscope.}}
+    {\bodytext{Conducted and analyzed data from electrophysiological experiments aimed at measuring the response of airway epithelial cells affected with the genetic disease cystic fibrosis (CF) to rhamnolipids, a virulence factor released by \textit{Pseudomonas} bacteria. By measuring the transepithelial electrical impact of rhamnolipids, it was found that they exert a regulatory role on CFTR chloride ion channel function. Data were presented at the 31\textsuperscript{st}Annual North American Cystic Fibrosis Conference. Additionally resolved several technical problems and created documentation for the lab's confocal microscope.}}
 }
 %\vspace{-1.5em}
 %\begin{center}
@@ -108,9 +111,10 @@
 %\end{center}
 
 
-\spacedhrule{0em}{-0.6em}
+\spacedhrule{0em}{-0.8em}
 
 \roottitle{Awards}
+\vspace{0.3em}
 \begin{itemize}
 	\item {\headedsection{\hspace{-1.2em}Eagle Scout Award} 
 		{\textit{May 2018}} {} }
@@ -126,16 +130,16 @@
 
 \vspace{-1em}
 \begin{multicols*}{2}
-\hspace{-2.3em} 
+\hspace{-1.8em} 
 \textbf{Programming}: Java, Python, Groovy, IDL, Jupyter Notebooks \\
 \textbf{Technical}: Bash, Git, IntelliJ, Eclipse, SketchUp, \LaTeX, Markdown, Regex, Jenkins, InfluxDB, Grafana \\
 \textbf{Languages}:
-English, German (fluent), French (proficient)\\
+English, German (fluent), French (proficient) \\ \\ \\
 \textbf{Projects}:
 Hybrid rocket engine demo, ballista, 3DR quadcopter drone, Raspberry Pi packet sniffer
 
-\hspace{-2.3em} \textbf{Interests}: Engineering, Data Science, Astrophysics, Climate Change, Cybersecurity, Economics, Psychology. \\
-\textbf{Hobbies}: Trail running, Golfing, Slow-motion videography, 3D Printing \& Modeling, Piano, Backpacking, Cardistry
+\hspace{-1.8em} \textbf{Interests}: Engineering, Data Science, Astrophysics, Cybersecurity, Energy, Economics, Psychology. \\
+\textbf{Hobbies}: Half-Marathon Trail running, Backpacking, Golfing, Piano, Violin, Chorus, Cardistry, Slow-motion videography, 3D Printing \& Modeling,
 	
 \end{multicols*}
 
