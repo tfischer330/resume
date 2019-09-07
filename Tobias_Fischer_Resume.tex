@@ -11,10 +11,10 @@
 
 
 % Start a document with the here given default font size and paper size.
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 % Set the page margins.
-\usepackage[letter,margin=0.5in]{geometry}
+\usepackage[letter,margin=0.4in]{geometry}
 
 % Setup the language.
 \usepackage[english]{babel}
@@ -34,7 +34,7 @@
 	% title on top of the document
 	\maintitle{Tobias Fischer}{}{}
 	
-	\nobreakvspace{0.4em}  % add some page break averse vertical spacing
+	\nobreakvspace{0.3em}  % add some page break averse vertical spacing
 	
 	% \noindent prevents paragraph's first lines from indenting
 	% \mbox is used to obfuscate the email address
@@ -49,53 +49,48 @@
 	\smash{\includegraphics[width=2cm]{googlQRcode.png}}
 	
 	
-	\spacedhrule{0.2em}{-0.7em}  % a horizontal line with some vertical spacing before and after
+	\spacedhrule{0.2em}{-0.5em}  % a horizontal line with some vertical spacing before and after
 	
-	\roottitle{Education}
-
+%\noindent\textbf{\large Education}\\
+%{\large \href{https://www.mae.cornell.edu/mae}{Cornell University} } \hfill{\textsc{Ithaca, NY}}\\
+%\normalsize \textbf{\textsc{Pursuing B.S. in Mechanical and Aerospace Engineering}} \hfill{\textit{2019 %-- 2022}} \\
+%Coursework: Mechanical Synthesis, Thermodynamics, Fluids, Statics, Dynamics \\
+%Activities: Men's Lightweight Crew
+\roottitle{Education}{}{
+	\vspace{-0.3em}
 	\headedsection
 	{\href{https://www.mae.cornell.edu/mae}{Cornell University}}
 	{\textsc{Ithaca, NY}} {
 		\headedsubsection
 		{\textsc{Pursuing B.S. in Mechanical Engineering}}
 		{2019 -- 2022}{}
-		\vspace{-.1em}
 		
-		\bodytext{
+		\bodytext{ \vspace{-0.2em}
 			Coursework: Mechanical Synthesis, Thermodynamics, Fluids, Statics, Dynamics\\ 
+			\textit{Activities: Men's Lightweight Crew}
 			%\sbull Member of the American Society of Mechanical Engineers (\href{https://www.asme.org/}{ASME})\\
-		}
-		\nobreakvspace{-1.5em}
-		
-		\headedsubsection{\textsc{Student Athlete: Men's Lightweight Crew}}{}{}
-		\nobreakvspace{-.3em}
-		
+		}	
 	}
-	\vspace{0.01cm}
+	
 	\headedsection
-{\href{https://www.stanford.edu/}{Stanford University}}
-{\textsc{Palo Alto, CA}} {
-	\headedsubsection
-	{\textsc{Pursuing Technology \& Innovation Intensive - GPA: } 4.0}
-	{Summer 2019}{}
-	\vspace{-.2em}
-	
-	\bodytext{Coursework: Technology Entrepreneurship, High Performance Computing, Public Speaking \\ 
+	{\hspace{-1.5em} \href{https://www.stanford.edu/}{Stanford University}}
+	{\textsc{Palo Alto, CA}} {
+		\headedsubsection
+		{\textsc{Pursuing Technology \& Innovation Intensive - GPA: } 4.0}
+		{Summer 2019}{}
+		\vspace{-.2em}
+		
+		\bodytext{Coursework: Technology Entrepreneurship, High Performance Computing, Public Speaking \\ 
+		\textsc{Silicon Valley Innovation Academy}
+		\textit{Engaged in the ideation and foresight analysis of moonshot technologies.}
 	}
-	\vspace{-1.6em}
-	
-	\headedsubsection{\textsc{Silicon Valley Innovation Academy}}{}{}
-		\vspace{-0.3em}
-		\bodytext{\textit{Engaged in the ideation and foresight analysis of moonshot technologies.} \\ 
-	}
-	\vspace{-1.3em}
-	%\vspace{-.4em}
-	%\bodytext{\hspace{-0.75em} \sbull }
-	
 }
+
+		
+	}
 	
 	\headedsection
-	{\href{https://engineering.ucsb.edu/}{UC Santa Barbara}}
+	{\hspace{-1.5em} \href{https://engineering.ucsb.edu/}{UC Santa Barbara}}
 	{\textsc{Santa Barbara, CA}} {%
 		\headedsubsection
 		{\textsc{Pursuing studies in Mechanical Engineering - GPA:} 3.94}
@@ -104,14 +99,16 @@
 		
 		\bodytext{Coursework: Manufacturing Methods, Engineering Writing, Machine Shop\\ 
 			\textit{Secretary of the UCSB ASME student chapter} \\
-		}
+	}
+}
+
+	
 %	\vspace{-1.5em}
 		
 	%	\headedsubsection{\textsc{Student Athlete: UCSB Rowing}}{}{}
 %		\vspace{-.5em}
 %		\bodytext{\hspace{-0.75em} \sbull Dedicating over 25 hours per week to training, meetings, travel, and competitions.}
 		
-	}
 	
 	\spacedhrule{-0.5em}{-0.5em}
 	
@@ -120,10 +117,10 @@
 	\textbf{Technical}: SolidWorks, HPC, SketchUp, IntelliJ, Eclipse, \LaTeX\\
 	\textbf{Programming}: Python, Matlab, Java, git, Jupyter Notebooks, Bash\\
 	\textbf{Personal Projects}:\\
-	\sbull 272-Core computing cluster build and management. \\
-	\sbull Hybrid Rocket Engine demonstration (\textit{PMMA Acrylic-GOX} fuel mixture)\\
+	\sbull 272-Core computing cluster build and management for highly-parallelized CFD applications. \\
+	\sbull Hybrid Rocket Engine design, manufacturing, and demonstration (\textit{PMMA Acrylic-GOX} fuel mixture)\\
 %	\sbull Ballista capable of launching a water balloon 100 meters\\
-	\sbull Quadcopter Drone assembly, wiring, and calibration\\
+	\sbull Quadcopter Drone assembly, wiring, calibration, and flight.\\
 	
 	
 	\spacedhrule{-0.4em}{-0.6em}
@@ -134,57 +131,58 @@
 	{\textsc{Santa Barbara, CA}} {
 		\headedsubsection
 		{Propulsion Team Member}
-		{Jan \apo19 -- present}
-		{\bodytext{
-				
-				\hspace{-0.75em} \sbull Designed the feed system for our rocket participating in the 2020 FAR MARS rocketry challenge to reach an altitude of 45,000 ft with total impulse constraints.
-				\\ \sbull Addressed fluid dynamics requirements related to using cryogenic LOX and methane, and sourced neccessary components and saftey systems.
-		}}
+		{Jan \apo19 -- present}{}
 	}
+\bodytext{
+	
+	\hspace{-0.75em} \sbull Designed the pressurized feed system for our rocket participating in the 2020 FAR MARS rocketry challenge to reach an altitude of 45,000 ft with a total impulse constraint of 9,208 lb-sec.
+	\\ \sbull Addressed fluid dynamics requirements related to high-pressure cryogenic LOX and methane \\ \sbull Generated a system P\&ID and sourced the neccessary components and saftey systems.
+}
 
 	\headedsection  % sets the header for the section and includes any subsections
-	{\href{https://www.sap.com/index.html}{SAP Headquarters}}
+	{\hspace{-1.5em}\href{https://www.sap.com/index.html}{SAP Headquarters}}
 	{\textsc{Walldorf, Germany}} {
 		\headedsubsection
 		{Data Analytics Intern}
-		{Jul \apo18 -- Sep \apo18}
-		{\bodytext{
+		{Jul \apo18 -- Sep \apo18}{}
+		\bodytext{
 				
 				\hspace{-0.75em} \sbull  Developed metrics and  \acr{KPI} monitoring for the enterprise CoDePipeS and Fiori CI/CD teams.
-				\\ \sbull Configured Grafana dashboards to monitor Jenkins pipelines, Docker containers, and virtual machine hosts. 
+				\\ \sbull Configured Grafana monitoring of Jenkins pipelines, Docker containers, and virtual machine hosts. 
 				\\ \sbull Managed the InfluxDB and Prometheus backend databases for metrics storage.
 				\\ \sbull Received an introduction to {\large \acr{AGILE}} and {\large \acr{PMBOK}} project management strategies, and DevOps.
-		}}
+		}
 	}
 
-	\vspace{0cm}
-%	\headedsection  % sets the header for a subsection and contains usually body text
-%	{\href{http://www.ssl.berkeley.edu/}{UC Berkeley Space Science Laboratory}}
-%	{\textsc{Berkeley, CA}}
-%	{
-%		\headedsubsection
-%		{Volunteer Research Assistant}
-%		{Jun \apo17 -- Sep \apo17}
-%		{\bodytext{
-%				\hspace{-0.75em} \sbull Analyzed \textit{in situ} energy flux data from \href{https://www.nasa.gov/mission_pages/maven/main/index.html}{NASA \acr{MAVEN}} orbiter’s Solar Energetic Particle (\acr{SEP}) and Solar Wind Electron Analyzer (\acr{SWEA}) instruments.
-%				\\ \sbull Interpreted data with the goal of understanding atmospheric loss at Mars.
-%				\\ \sbull Performed statistical data analysis using Python and Interactive Data Language (\acr{IDL}).
-%				%\\ \sbull Under mentorship of Dr.\hspace{0.3em}Christina Lee.}}
-%}
-%}
-%}
-	\spacedhrule{0.5em}{-0.8em}
+\headedsection  % sets the header for the section and includes any subsections
+{\hspace{-1.5em}\href{http://www.ssl.berkeley.edu/}{UC Berkeley Space Science Laboratory}}
+{\textsc{Berkeley, CA}} {
+	\headedsubsection
+	{Volunteer Research Assistant}
+	{Jun \apo17 -- Sep \apo17}{}
+	\bodytext{
+		
+		\hspace{-0.75em} \sbull  Analyzed \textit{in situ} solar energy flux data from \href{https://www.nasa.gov/mission_pages/maven/main/index.html}{NASA \acr{MAVEN}} orbiter’s Solar Energetic Particle (\acr{SEP}) and Solar Wind Electron Analyzer (\acr{SWEA}) instruments.
+		\\ \sbull Interpreted this data with the goal of understanding atmospheric loss at Mars.
+		\\ \sbull Performed statistical data analysis using Python.
+    	%\\ \sbull Under mentorship of Dr.\hspace{0.3em}Christina Lee.}}
+	}
+}
+
+
+	\spacedhrule{0.2em}{-0.8em}
 	
-	\roottitle{Awards}
-	\vspace{0.3em}
-	\begin{itemize}
-		\item {\headedsection{\hspace{-1.2em}SB Hacks V Hackathon: Arthrex Award for Best Security-Related Project}{\textit{January 2019}}{}}
-		\item {\headedsection{\hspace{-1.2em}Eagle Scout Award}{\textit{May 2018}}{}}
+	\roottitle{Awards}{}{}
+ \hspace{-0.75em} \sbull \noindent SB Hacks V Hackathon: Arthrex Award for Best Security-Related Project \hfill \textit{January 2019} \\
+\sbull Eagle Scout Award \hfill \textit{May 2018}
+	%\begin{itemize}
+%		\item {\headedsection{SB Hacks V Hackathon: Arthrex Award for Best Security-Related Project}{\textit{January 2019}}{}}
+%		\item {\headedsection{Eagle Scout Award}{\textit{May 2018}}{}}
 		%\item {\headedsection{\hspace{-1.2em}All-Academic Cross Country Team}{\textit{December 2017}}{}}
 		%	\item {\headedsection{\hspace{-1.2em}Most Valuable Athlete; CCA Cross Country} {\textit{November 2017}} {}}
-	\end{itemize}
+	%\end{itemize}
 	
-	\spacedhrule{-.1em}{-0.7em}
+	\spacedhrule{.5em}{-0.7em}
 	
 	\roottitle{\normalsize Interests:}
 	\vspace{-0.65cm}
